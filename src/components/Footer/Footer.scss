@@ -1,0 +1,17 @@
+@use "../../styles/variables";
+
+footer {
+  padding: 20px 0;
+  max-width: 100%;
+  background-color: variables.$greyColor;
+  flex: 0 0 auto;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+.footer-text {
+  color: variables.$whiteColor;
+  text-align: center;
+}

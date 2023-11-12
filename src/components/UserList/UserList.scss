@@ -1,0 +1,39 @@
+@use "../../styles/variables";
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user {
+  width: 550px;
+  margin-bottom: 10px;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid variables.$buttonColor;
+  border-radius: variables.$radius;
+  padding: 15px;
+}
+
+.user-info_row {
+  display: flex;
+  flex-direction: column;
+  .user-info-name {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .user-info_text {
+    font-size: 14px;
+  }
+}
+
+.button-delete {
+  background-color: variables.$buttonColor;
+  padding: 10px;
+  border-radius: variables.$radius;
+  width: 100px;
+}

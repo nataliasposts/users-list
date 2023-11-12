@@ -1,0 +1,47 @@
+@use "./variables";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+:root {
+  font-family: variables.$fontFamily;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: variables.$fontFamily;
+  color: inherit;
+  background-color: inherit;
+  outline: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  font-family: variables.$fontFamily;
+  background-color: inherit;
+  outline: inherit;
+  outline: inherit;
+  border: none;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+}

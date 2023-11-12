@@ -1,0 +1,15 @@
+@use "../../styles/variables";
+
+header {
+  padding: 20px 0;
+  max-width: 100%;
+  background-color: variables.$greyColor;
+}
+
+.container {
+  padding: 0 15px;
+}
+
+.header-text {
+  color: variables.$whiteColor;
+}
