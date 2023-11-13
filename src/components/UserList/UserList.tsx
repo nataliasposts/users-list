@@ -1,10 +1,10 @@
 import { useDispatch } from "react-redux";
 import UserDto from "../../types/UserDto";
 import TextEnum from "../../types/enums/TextEnum";
-import HighlightMatch from "../helpers/HighlightMatch";
 import deleteUser from "../../store/selectors/deleteUser";
 import "./UserList.scss";
 import { useState } from "react";
+import HighlightMatch from "../helpers/HighlightMatch";
 import ModalWindow from "../ModalWindow/ModalWindow";
 
 type UserComponentProps = {
@@ -13,7 +13,6 @@ type UserComponentProps = {
 };
 
 const UserList: React.FC<UserComponentProps> = ({ users, searchTerm }) => {
-  if (!users) return null;
   const [selectedUser, setSelectedUser] = useState<UserDto | null>(null);
   const dispatch = useDispatch();
 
@@ -46,7 +45,7 @@ const UserList: React.FC<UserComponentProps> = ({ users, searchTerm }) => {
                 <HighlightMatch text={user.email} query={searchTerm} />
               </p>
             </div>
-            <div>
+            <div className="button-wrapper">
               <button
                 type="button"
                 onClick={(event) => handleDeleteUser(user.id, event)}

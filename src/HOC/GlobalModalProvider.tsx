@@ -1,4 +1,10 @@
-import { ReactNode, createContext, useState, useMemo } from "react";
+import {
+  ReactNode,
+  createContext,
+  useState,
+  useMemo,
+  useCallback,
+} from "react";
 
 export type ModalContextType = {
   showModal: (content: ReactNode) => void;
@@ -14,13 +20,13 @@ type ModalProviderProps = {
 const GlobalModalProvider = ({ children }: ModalProviderProps) => {
   const [modalContent, setModalContent] = useState<ReactNode | null>(null);
 
-  const showModal = (content: ReactNode) => {
+  const showModal = useCallback((content: ReactNode) => {
     setModalContent(content);
-  };
+  }, []);
 
-  const hideModal = () => {
+  const hideModal = useCallback(() => {
     setModalContent(null);
-  };
+  }, []);
 
   const modalContextValue = useMemo(
     () => ({

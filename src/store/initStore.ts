@@ -1,8 +1,8 @@
-import { createStore, applyMiddleware } from "redux";
+import { createStore, applyMiddleware, Middleware } from "redux";
 import { persistStore, persistReducer, PersistConfig } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import hardSet from "redux-persist/lib/stateReconciler/hardSet";
-import { composeWithDevTools } from "redux-devtools-extension";
+import { composeWithDevTools } from "@redux-devtools/extension";
 import rootReducer from "./reducer/rootReducer";
 import RootState from "./state/RootState";
 
@@ -14,8 +14,7 @@ const persistConfig: PersistConfig<RootState> = {
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-// TODO
-const middlewares: any[] = [];
+const middlewares: Middleware[] = [];
 const middlewareEnhancer = applyMiddleware(...middlewares);
 
 const enhancers = [middlewareEnhancer];

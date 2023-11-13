@@ -6,6 +6,8 @@ type HighlightMatchProps = {
 };
 
 const HighlightMatch: React.FC<HighlightMatchProps> = ({ text, query }) => {
+  if (!text) return null;
+
   if (!query) {
     return <span>{text}</span>;
   }

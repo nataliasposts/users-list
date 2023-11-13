@@ -16,18 +16,47 @@
   border: 1px solid variables.$buttonColor;
   border-radius: variables.$radius;
   padding: 15px;
+  cursor: pointer;
+
+  @media (max-width: 650px) {
+    width: 450px;
+  }
+
+  @media (max-width: 480px) {
+    width: 270px;
+    flex-direction: column;
+  }
+
+  @media (max-width: 320px) {
+    width: 200px;
+  }
+}
+
+.user:hover {
+  border: 5px solid variables.$buttonColor;
 }
 
 .user-info_row {
   display: flex;
   flex-direction: column;
-  .user-info-name {
-    font-weight: 600;
-    font-size: 16px;
-    margin-bottom: 10px;
+}
+
+.user-info-name {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+
+  @media (max-width: 480px) {
+    align-self: center;
   }
-  .user-info_text {
-    font-size: 14px;
+}
+
+.user-info_text {
+  font-size: 14px;
+
+  @media (max-width: 480px) {
+    align-self: center;
+    margin-bottom: 10px;
   }
 }
 
@@ -36,4 +65,15 @@
   padding: 10px;
   border-radius: variables.$radius;
   width: 100px;
+
+  @media (max-width: 480px) {
+    align-self: center;
+  }
+}
+
+.button-wrapper {
+  @media (max-width: 480px) {
+    display: flex;
+    justify-content: center;
+  }
 }

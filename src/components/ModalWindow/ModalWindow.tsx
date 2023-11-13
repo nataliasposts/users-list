@@ -8,8 +8,6 @@ type ModalWindowProps = {
 };
 
 const ModalWindow = ({ user, onClose }: ModalWindowProps) => {
-  if (!user) return null;
-
   return (
     <div className="modal">
       <div className="modal-body">

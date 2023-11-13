@@ -24,13 +24,32 @@
   padding: 20px;
   position: relative;
   border-radius: variables.$radius;
+
+  @media (max-width: 690px) {
+    width: 400px;
+  }
+
+  @media (max-width: 480px) {
+    width: 280px;
+  }
+
+  @media (max-width: 320px) {
+    width: 200px;
+  }
 }
 
 .modal-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 10px;
+
+  .title {
+    font-size: 16px;
+    margin-right: 10px;
+    align-self: center;
+  }
 }
 
 .button-close {
@@ -40,6 +59,11 @@
   width: 70px;
   p: {
     align-self: center;
+    font-size: 14px;
+  }
+
+  @media (max-width: 480px) {
+    margin: 10px 0 10px 0;
   }
 }
 
@@ -51,6 +75,7 @@
 .modal-info_item {
   margin-bottom: 5px;
   font-weight: 600;
+  font-size: 14px;
   .info-item_text {
     font-weight: 400;
   }
