@@ -9,7 +9,7 @@ import GlobalModalProvider from "./HOC/GlobalModalProvider.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/users-list">
       <GlobalStoreProvider>
         <GlobalModalProvider>
           <App>
