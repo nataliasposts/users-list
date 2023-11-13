@@ -7,20 +7,13 @@
 }
 
 .user {
-  width: 550px;
+  width: 350px;
   margin-bottom: 10px;
   align-self: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   border: 1px solid variables.$buttonColor;
   border-radius: variables.$radius;
   padding: 15px;
   cursor: pointer;
-
-  @media (max-width: 650px) {
-    width: 450px;
-  }
 
   @media (max-width: 480px) {
     width: 270px;
@@ -33,7 +26,7 @@
 }
 
 .user:hover {
-  border: 5px solid variables.$buttonColor;
+  border: 3px solid variables.$buttonColor;
 }
 
 .user-info_row {
@@ -45,19 +38,12 @@
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 10px;
-
-  @media (max-width: 480px) {
-    align-self: center;
-  }
+  align-self: center;
 }
 
 .user-info_text {
   font-size: 14px;
-
-  @media (max-width: 480px) {
-    align-self: center;
-    margin-bottom: 10px;
-  }
+  align-self: center;
 }
 
 .button-delete {
@@ -65,15 +51,11 @@
   padding: 10px;
   border-radius: variables.$radius;
   width: 100px;
-
-  @media (max-width: 480px) {
-    align-self: center;
-  }
+  margin-top: 10px;
+  align-self: center;
 }
 
 .button-wrapper {
-  @media (max-width: 480px) {
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center;
 }

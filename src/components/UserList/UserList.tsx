@@ -26,7 +26,7 @@ const UserList: React.FC<UserComponentProps> = ({ users, searchTerm }) => {
   };
 
   return (
-    <ul className="user-list">
+    <ol className="user-list">
       {users.length > 0 ? (
         users.map((user) => (
           <li
@@ -62,7 +62,7 @@ const UserList: React.FC<UserComponentProps> = ({ users, searchTerm }) => {
       {selectedUser ? (
         <ModalWindow onClose={handleCloseModal} user={selectedUser} />
       ) : null}
-    </ul>
+    </ol>
   );
 };
 
